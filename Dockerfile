@@ -67,7 +67,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
         sqlite3=3.45.* \
         swig3.0=3.0.* \
         tk-dev=8.6.* \
-        tzdata=2025b-* \
+        tzdata=2026a-* \
         universal-ctags=5.9.* \
         unixodbc-dev=2.3.* \
         unzip=6.0-* \
@@ -225,7 +225,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ### RUST ###
 
-ARG RUST_VERSIONS="1.92.0 1.91.1 1.90.0 1.89.0 1.88.0 1.87.0 1.86.0 1.85.1 1.84.1 1.83.0"
+ARG RUST_VERSIONS="1.93.0 1.92.0 1.91.1 1.90.0 1.89.0 1.88.0 1.87.0 1.86.0 1.85.1 1.84.1 1.83.0"
 RUN --mount=type=cache,target=/root/.cargo/registry \
     --mount=type=cache,target=/root/.cargo/git \
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain none \
